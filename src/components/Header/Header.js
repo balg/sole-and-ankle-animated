@@ -20,12 +20,12 @@ const Header = () => {
           <Logo />
         </LogoWrapper>
         <DesktopNav>
-          <StyledNavLink href="/sale" label="Sale" />
-          <StyledNavLink href="/new" label="New&nbsp;Releases" />
-          <StyledNavLink href="/men" label="Men" />
-          <StyledNavLink href="/women" label="Women" />
-          <StyledNavLink href="/kids" label="Kids" />
-          <StyledNavLink href="/collections" label="Collections" />
+          <StyledNavLink href="/sale">Sale</StyledNavLink>
+          <StyledNavLink href="/new">New&nbsp;Releases</StyledNavLink>
+          <StyledNavLink href="/men">Men</StyledNavLink>
+          <StyledNavLink href="/women">Women</StyledNavLink>
+          <StyledNavLink href="/kids">Kids</StyledNavLink>
+          <StyledNavLink href="/collections">Collections</StyledNavLink>
         </DesktopNav>
         <MobileActions>
           <ShoppingBagButton>
