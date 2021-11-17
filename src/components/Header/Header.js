@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-
-import { QUERIES, WEIGHTS } from '../../constants';
-import Logo from '../Logo';
-import Icon from '../Icon';
-import UnstyledButton from '../UnstyledButton';
-import SuperHeader from '../SuperHeader';
-import MobileMenu from '../MobileMenu';
-import VisuallyHidden from '../VisuallyHidden';
+import React from "react";
+import styled from "styled-components/macro";
+import { QUERIES } from "../../constants";
+import Icon from "../Icon";
+import Logo from "../Logo";
+import MobileMenu from "../MobileMenu";
+import SuperHeader from "../SuperHeader";
+import UnstyledButton from "../UnstyledButton";
+import VisuallyHidden from "../VisuallyHidden";
+import NavLink from "./NavLink";
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -20,12 +20,12 @@ const Header = () => {
           <Logo />
         </LogoWrapper>
         <DesktopNav>
-          <NavLink href="/sale">Sale</NavLink>
-          <NavLink href="/new">New&nbsp;Releases</NavLink>
-          <NavLink href="/men">Men</NavLink>
-          <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
+          <StyledNavLink href="/sale" label="Sale" />
+          <StyledNavLink href="/new" label="New&nbsp;Releases" />
+          <StyledNavLink href="/men" label="Men" />
+          <StyledNavLink href="/women" label="Women" />
+          <StyledNavLink href="/kids" label="Kids" />
+          <StyledNavLink href="/collections" label="Collections" />
         </DesktopNav>
         <MobileActions>
           <ShoppingBagButton>
@@ -114,13 +114,7 @@ const Filler = styled.div`
   }
 `;
 
-const NavLink = styled.a`
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-gray-900);
-  font-weight: ${WEIGHTS.medium};
-
+const StyledNavLink = styled(NavLink)`
   &:first-of-type {
     color: var(--color-secondary);
   }
